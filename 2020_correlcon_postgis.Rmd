@@ -1,0 +1,37 @@
+---
+titel: "Introduction to PostGIS"
+subtitle: "A spatial extensions to PostgreSQL"
+author: "Malte Kyhos"
+institute: "Civey GmbH, Berlin"
+date: "2020-11-09"
+output:
+    xaringan::moon_reader:
+        lib_dir: libs
+        css: ["default", "css/sfah.css", "css/fonts.css"]
+        nature:
+            highlightStyle: github
+            highlightLines: true
+            countIncrementalSlides: false
+            ratio: "16:9"
+            beforeInit: "https://platform.twitter.com/widgets.js"
+        seal: false
+        includes:
+            in_header: header.html
+---
+
+```{r setup, include=FALSE, cache=FALSE}
+
+# Packages
+
+library(dplyr)
+library(kableExtra)
+library(RefManageR)
+library(gt)
+library(fontawesome)
+library(DT)
+
+# Data
+
+
+
+
