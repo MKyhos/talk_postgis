@@ -1,9 +1,4 @@
 ---
-titel: "Introduction to PostGIS"
-subtitle: "A spatial extensions to PostgreSQL"
-author: "Malte Kyhos"
-institute: "Civey GmbH, Berlin"
-date: "2020-11-09"
 output:
     xaringan::moon_reader:
         lib_dir: libs
@@ -12,7 +7,7 @@ output:
             highlightStyle: github
             highlightLines: true
             countIncrementalSlides: false
-            ratio: "16:9"
+            ratio: "4:3"
             beforeInit: "https://platform.twitter.com/widgets.js"
         seal: false
         includes:
@@ -22,16 +17,99 @@ output:
 ```{r setup, include=FALSE, cache=FALSE}
 
 # Packages
-
 library(dplyr)
 library(kableExtra)
 library(RefManageR)
 library(gt)
 library(fontawesome)
 library(DT)
-
 # Data
+```
+
+layout: true
+
+<div class="my-footer">
+    <span>
+        <a href="https://www.github.com/MKyhos", style="color:white;">
+            `r fa(name="github", fill="white")` /MKyhos
+        </a>
+    </span>
+</div>
+
+---
+
+class: middle
+background-image: url("http://www.johngordonart.com/wp-content/uploads/2015/02/Elephant-World-Drawing-v2-by-Artist-John-Gordon-1024x1024.jpg")
+background-position: bottom right
+background-size: 400px 400px
+# An Introduction to PostGIS
+.fancy2[...PostgreSQL going spatial]
+
+
+<p style="margin-top:4cm;"> 
+    CorrelCon 2020 <br>
+    <a href="https://twitter.com/maltekyhos">
+        `r fa(name = "twitter")` @maltekyhos
+    </a>
+</p>
+
+
+---
+class: middle, inverse
+
+# Spatial Databases
+
+
+* What are they
+* Why?
+
+---
+
+## Architecture
 
 
 
+---
+
+## Example: Database Layout
+
+
+---
+class: middle, inverse 
+
+# Features
+
+
+---
+
+**Query:** Get post codes intersecting with  
+--
+```{sql eval=FALSE}
+SELECT *
+FROM ST_distance(geom)
+WHERE;
+```
+--
+***
+**Query:** 
+
+--
+```{sql eval=FALSE}
+SELECT id
+FROM
+
+```
+
+
+
+---
+class: middle, inverse, center
+
+# Questions?
+
+Thanks for tuning out!
+
+---
+
+# References
 
