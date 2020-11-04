@@ -71,7 +71,7 @@ class: middle, inverse
 
 ---
 
-## Example: Database Layout
+## DB schema (example)
 
 
 ---
@@ -107,7 +107,9 @@ class: middle, inverse, center
 
 # Questions?
 
-Thanks for tuning out!
+--
+
+Thanks for tuning in!
 
 ---
 
