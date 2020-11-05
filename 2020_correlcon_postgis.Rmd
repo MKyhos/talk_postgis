@@ -84,6 +84,7 @@ class: middle, inverse
 
 **Query:** Get post codes intersecting with  
 --
+
 ```{sql eval=FALSE}
 SELECT *
 FROM ST_distance(geom)
@@ -97,7 +98,6 @@ WHERE;
 ```{sql eval=FALSE}
 SELECT id
 FROM
-
 ```
 
 

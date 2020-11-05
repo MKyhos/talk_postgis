@@ -1,1 +1,5 @@
 postgis_files/berlin-germany.osm.pbf
+talk_postgis.Rproj
+
+.Rproj.user/
+.Rhistory
