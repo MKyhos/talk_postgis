@@ -19,7 +19,6 @@ output:
 # Packages
 library(dplyr)
 library(kableExtra)
-library(RefManageR)
 library(gt)
 library(fontawesome)
 library(DT)
@@ -57,16 +56,42 @@ background-size: 400px 400px
 ---
 class: middle, inverse
 
-# Spatial Databases
+# The Case for Spatial Databases
 
 
-* What are they
-* Why?
+* What they are
+* Why we should use them
 
 ---
 
-## Architecture
+## Often seen approaches
 
+
+Shapefiles
+GeoPackage
+...
+
+
+
+
+---
+
+## Ideal Enterprise DB
+
+A system that allows for
+
+- Integration with various tools
+    - Desktop applications
+    - Server middleware
+    - Web Applications
+    - Programming languages
+- Functions and types
+- Scalability, security, reliability, administration
+
+
+---
+
+## Unified Architecture
 
 
 ---
@@ -74,13 +99,55 @@ class: middle, inverse
 ## DB schema (example)
 
 
+
+
 ---
 class: middle, inverse 
 
-# Features
+# Features, Functionality
+
+Underlying libraries & exposed functions
+
+* `libproj`
+* `libgeos` 
+* `libgdal`
+* `libcgal`
+
 
 
 ---
+
+## `PROJ` -- Geographical Projections
+
+
+```{sql, eval=FALSE}
+
+ST_Transform(geometry, srid)
+
+```
+
+
+
+---
+
+## `GEOS` -- Relationships between Geometries
+
+
+* Relationships: `ST_Intersects()`, `ST_Contains()`,
+    `ST_Touches()`, `ST_Overlaps()`, ...
+* Set generation: `ST_Union()`, `ST_Intersection()`, 
+    `ST_SymDifference()`, `ST_Difference()`
+* New geometries: `ST_Buffer()`
+* 
+
+
+---
+
+## `CGAL` -- 
+
+
+
+
 
 **Query:** Get post codes intersecting with  
 --
@@ -99,6 +166,25 @@ WHERE;
 SELECT id
 FROM
 ```
+
+
+---
+class: middle, inverse
+
+# Performance
+
+* (Spatial) Indexing
+* Database Maintenance
+
+
+---
+
+## Spatial Indexing
+
+
+---
+
+## 
 
 
 
