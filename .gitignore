@@ -4,3 +4,12 @@ talk_postgis.Rproj
 
 .Rproj.user/
 *.Rproj
+.Rhistory
+.DS_Store
+
+
+# Local cache from presentation:
+
+# Too large for GH, sorry :(
+dta/
+
