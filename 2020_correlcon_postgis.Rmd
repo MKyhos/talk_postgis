@@ -47,8 +47,8 @@ BibOptions(
   bib.style = "authoryear",
   #cite.style = "authoryear",
   style = "markdown",
-  hyperlink = TRUE,
-  dashed = FALSE
+  hyperlink = FALSE,
+  dashed = TRUE
 )
 
 myBib <- ReadBib("postgis_references.bib", check = FALSE)
@@ -399,17 +399,19 @@ $$\text{SpatialJoin}(X, Y, \pi) = \{(o_x, o_y)~|~o_x \in X, o_y \in Y, \pi(o_x, 
 
 ### Example: Spatial Join
 
-Grab Food nearby the station
+Finding the subway station with most nearby restaurants in Berlin.
 
 ```{sql connection=db}
-SELECT m.nam as station_name, Count(*) as nearby_restaurants
-FROM berlin_metro_station AS m,
-	(SELECT name AS restaurant_name, way AS geom
-	FROM planet_osm_point
-	WHERE amenity = 'restaurant') AS r
-WHERE ST_Covers(ST_Buffer(m.geom, 250), r.geom)
+SELECT m.nam as station_name, Count(*) AS nearby_restaurants
+FROM berlin_metro_station AS m
+JOIN planet_osm_point AS r
+  ON ST_DWithin(m.geom, r.way, 250)
+WHERE r.amenity = 'restaurant'
 GROUP BY 1 ORDER BY 2 DESC LIMIT 5;
 ```
+
+(Thanks to Paul Ramsey for pointing out a more efficient query!)
+
 
 ??? 
 
@@ -618,10 +620,10 @@ Thanks for tuning in!
 * [Interactive PostGIS Learning Portal](https://learn.crunchydata.com/postgis)
   by CrunchyData
 
-**Talks** (used as starting point for this presentation)
+**Talks** (basically a super set of the slides you just saw) 
 
-* `r Citet(myBib,"pousty2019alltogeter")`
-* `r Citet(myBib, "ramsey2019allofpostgis")`
+* Steve `r Citet(myBib,"pousty2019alltogeter")`
+* Paul `r Citet(myBib, "ramsey2019allofpostgis")`
 
 
 The official documentation and everything mentioned in this talk can be found on
