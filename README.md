@@ -1,2 +1,4 @@
-# talk_postgis
-Talk "Introduction to PostGIS" at CorrelCon 2020
+# A first Introduction to PostGIS
+
+Slides for the talk "An Introduction to PostGIS", held at Geospatial
+Session at CorrelCon 2020. 
