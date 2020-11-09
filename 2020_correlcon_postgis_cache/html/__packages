@@ -1,0 +1,10 @@
+base
+dplyr
+kableExtra
+gt
+fontawesome
+DT
+mapview
+RefManageR
+DBI
+leafpop
