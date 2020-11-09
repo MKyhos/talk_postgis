@@ -7,6 +7,7 @@ docker run \
     -e POSTGRES_PASS=password \
     -e POSTGRES_DBNAME=gis \
     -p 5432:5432 \
+    --network=pgnetwork \
     -v postgis_data:/var/lib/postgresql \
     --restart=always \
     kartoza/postgis
